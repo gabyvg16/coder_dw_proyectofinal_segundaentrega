@@ -1,0 +1,458 @@
+/* Universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #051922;
+    overflow-x: hidden;
+}
+
+/* Titulos */
+h1,
+h3 {
+    font-family: 'Dancing Script', cursive;
+    color: floralwhite;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+h5 {
+    font-size: 0.9rem;
+}
+
+h6 {
+    color: floralwhite;
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+/* Colores */
+.verde {
+    color: #0D5102;
+}
+
+/* Enlaces */
+a {
+    text-decoration: none;
+}
+
+/* Fondos */
+.fondoColor {
+    background-color: #0D5102;
+}
+
+.background {
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.fondoTexto {
+    background-color: #0D5102;
+    margin: 1rem;
+    border-radius: 10px;
+    align-items: center;
+}
+
+/* Título página */
+.tituloPagina {
+    background-color: #0D5102;
+    padding: 1rem;
+    opacity: 0.5;
+    width: 100%;
+    text-align: center;
+    grid-area: tituloPagina;
+}
+
+/* Iconos */
+/* Carrito */
+.iconoCarrito a {
+    color: #fff;
+    display: inline-block;
+    padding: 10px;
+}
+
+/* Whatsapp */
+.fa-whatsapp {
+    color: whitesmoke;
+    background-color: green;
+    font-size: 2rem;
+    padding: 0.6rem;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+}
+
+/* Grid areas */
+.texto1 {
+    grid-area: texto1;
+}
+
+.texto2 {
+    grid-area: texto2;
+}
+
+.texto3 {
+    grid-area: texto3;
+}
+
+.imagenPrincipal {
+    grid-area: imagenPrincipal;
+}
+
+/* Grids */
+.grillaCursos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "tituloPagina tituloPagina"
+        "texto1 texto1"
+        "video video"
+        "texto2 texto2";
+    justify-items: center;
+    padding-bottom: 3rem;
+}
+
+.grillaInicio {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "carouselImagenes"
+        "texto1"
+        "tienda"
+        "texto2";
+}
+
+.grillaNosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas:
+        "tituloPagina     tituloPagina"
+        "texto1     texto1"
+        "texto2     texto2"
+        "texto3     texto3"
+        "video      video";
+    padding-bottom: 3rem;
+}
+
+/* Carousel */
+.carousel-inner img {
+    max-height: 650px;
+}
+
+.carousel-inner {
+    max-height: 650px;
+}
+
+/* Video e imagen */
+.video {
+    max-width: 500px;
+    height: 300px;
+    grid-area: video;
+}
+
+.imagen {
+    max-width: 450px;
+}
+
+/* Párrafos */
+p {
+    text-align: justify;
+    padding: 1rem;
+    font-size: 0.7rem;
+    color: #fff;
+}
+
+/* Imagenes */
+.containerImagenes {
+    display: grid;
+    grid-template-rows: repeat(3, 180px);
+    grid-template-columns: 1fr;
+    justify-items: center;
+    justify-content: center;
+    grid-row-gap: 1rem;
+    padding: 1rem;
+}
+
+/* Tienda */
+.card-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;
+    color: #0D5102;
+    padding: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.card-text {
+    color: #0D5102;
+    text-align: center;
+    font-style: italic;
+    padding: 0.5rem;
+    margin: 0.3rem;
+}
+
+.cardAgregar {
+    background-color: #0D5102;
+}
+
+.imagenTienda {
+    width: 180px;
+    height: auto;
+    box-shadow: 6px 6px 8px -1px rgba(0, 0, 0, 0.6);
+}
+
+.tituloImagen {
+    height: 80px;
+    width: 180px;
+    background-color: wheat;
+    transform: translate(0%, -155%);
+    opacity: 50%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    text-align: center;
+    color: darkgreen;
+    padding: 1rem;
+}
+
+/* Footer */
+.footer {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-area: footer;
+    width: 100%;
+}
+
+/* Formularios */
+.containerForm {
+    width: 95%;
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 6px 6px 8px -1px rgba(0, 0, 0, 0.6);
+    margin: 1rem;
+}
+
+.campos {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    border: none;
+}
+
+.form {
+    text-align: center;
+}
+
+.formLabel {
+    font-weight: bold;
+    font-size: 0.7rem;
+    text-align: left;
+    width: 40%;
+    margin: 0.5rem;
+}
+
+.formInput {
+    width: 45%;
+    background-color: whitesmoke;
+    border: none;
+    border-bottom: solid 3px silver;
+    font-size: 0.7rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+.formInput:focus {
+    outline: none;
+}
+
+.formInputSubmit {
+    border-radius: 0.5rem;
+    background-color: #0D5102;
+    margin: 0.2rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: whitesmoke;
+    padding: 0.2rem;
+    cursor: pointer;
+}
+
+.formInputSubmit:hover {
+    background-color: rgb(60, 150, 60);
+}
+
+/* Contacto */
+.contacto {
+    display: flex;
+    justify-content: center;
+}
+
+.containerFormContacto {
+    width: 90%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seleccion {
+    display: flex;
+    align-items: center;
+}
+
+.areaTexto {
+    border-radius: 0.5rem;
+    display: block;
+    width: 90%;
+    height: 100px;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 0.8rem;
+}
+
+/* Centrar texto */
+.centrar {
+    text-align: center;
+}
+
+/* Para ocultar */
+.mostrar {
+    display: none;
+}
+
+/* Media queries */
+/* Vista Tablet */
+@media(min-width: 768px) {
+    .containerImagenes {
+        grid-template-rows: 180px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer {
+        flex-direction: row;
+    }
+
+    .containerForm {
+        width: 40%;
+    }
+
+    .video {
+        width: 500px;
+        height: 281px;
+        padding: 1rem;
+    }
+
+    .containerFormContacto {
+        width: 55%;
+    }
+}
+
+/* Vista escritorio */
+@media(min-width: 1024px) {
+    .grillaNosotros {
+        grid-template-areas:
+            "tituloPagina tituloPagina"
+            "video texto1"
+            "video texto2"
+            "texto3 imagenPrincipal";
+    }
+
+    .grillaCursos {
+        grid-template-areas:
+            "tituloPagina tituloPagina"
+            "texto1 video"
+            "texto2 video";
+    }
+
+    .containerImagenes {
+        height: 300px;
+        padding: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .areaTexto,
+    .formLabel {
+        font-size: 0.9rem;
+    }
+
+    .formInput {
+        font-size: 0.8rem;
+    }
+
+    .imagenPrincipal {
+        width: 450px;
+        height: auto;
+    }
+
+    .mostrar {
+        display: unset;
+    }
+
+    /* Efectos */
+    .efectoImagen {
+        position: relative;
+        float: left;
+    }
+
+    .efectoImagen:hover .efectoTexto {
+        opacity: 95%;
+    }
+
+    .efectoImagen:hover .imagenTienda {
+        opacity: 1;
+        transform: scale(1.15, 1.15);
+        -webkit-transform: scale(1.15, 1.15);
+        -moz-transform: scale(1.15, 1.15);
+        -ms-transform: scale(1.15, 1.15);
+        -o-transform: scale(1.15, 1.15);
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        -ms-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+    }
+
+    .efectoTexto {
+        cursor: pointer;
+        position: absolute;
+        opacity: 0;
+        -webkit-transition: all 0.45s ease-in-out;
+        -moz-transition: all 0.45s ease-in-out;
+        -o-transition: all 0.45s ease-in-out;
+        -ms-transition: all 0.45s ease-in-out;
+        transition: all 0.45s ease-in-out;
+    }
+
+    .tituloImagen {
+        width: 250px;
+        transform: scale(1.15, 1.15) translate(0%, -155%);
+    }
+
+    .imagenTienda {
+        width: 250px;
+        height: auto;
+    }
+}
